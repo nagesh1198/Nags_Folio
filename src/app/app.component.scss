@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+.whole-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #252839;
+    background:radial-gradient(
+        circle 40vmax at var(--cX) var(--cY),
+        rgb(26, 26, 29) 0%,
+        rgb(10, 10, 10) 100%
+      );
+    position: relative;
+    overflow: hidden;
+  }
+  
+ 
+  
+h2{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 10vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #252839;
+    text-transform: uppercase;
+}
+
+
+.whole-container{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#bay #welcome_path {
+    stroke-dasharray: 9541.93;
+    stroke-dashoffset: 9541.93;
+    stroke: #ccc;
+    fill: transparent;
+    transition: fill 2s ease-in-out, stroke-dashoffset 2s ease-in-out;
+  }
+  
+  #bay.active #welcome_path {
+    stroke-dashoffset: 0;
+    fill: #ccc;
+  }
+
+  header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  margin-bottom: 3rem;
+  }
+  header ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    justify-content: center;
+  }
+  header ul a{
+    color: #eee;
+    margin-left: 30px;
+    line-height: 1.5;
+    display: flex;
+  }
+
+  .img{
+    border-radius: 20px;
+  }

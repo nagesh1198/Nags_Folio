@@ -1,0 +1,26 @@
+<div class="card-container" [class.flipped]="isFlipped" (click)="flipCard()">
+  <div class="card">
+    <div style="height: auto; background-color: transparent; border: none;" class="card-front">
+      <img
+      *ngIf="imageURL"
+       style="height: 120px; width: 292px; border-radius: 20px;"
+       [src]="imageURL"
+       alt=""/>
+       
+      <div class="card-footer">
+        <ng-content select="[card-footer]"></ng-content>
+        <button *ngIf="buttonLabel" (click)="onButtonClick()">
+          {{ buttonLabel }}
+        </button>
+    </div>
+  </div>
+    <div class="card-back" style="width: 200px;height: 120px; display: flex; flex-direction: column-reverse; gap: 20px; border-radius: 20px;">
+      <div class="card-header" style="font-size: 15px; text-align: center;">
+        <ng-content select="[header]"></ng-content>
+      </div>
+      <div class="card-content" style="font-size: 15px; text-align: center;">
+        <ng-content select="[content]"></ng-content>
+      </div>
+      </div>
+    </div> 
+</div>
